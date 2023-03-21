@@ -2,6 +2,7 @@ package com.resume.resume1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,13 +12,14 @@ import android.widget.TextView;
 
 public class Experiance6 extends AppCompatActivity {
 
-    String company_name,job,description,year,certi;
-    EditText edcompanyName,edjob,eddescription,edyear,edcerti;
-    TextView txtreset,txtnext;
+    String company_name,job1,description1,year1,certi1;
+    EditText companyName,job,description,year,cert;
+    TextView reset,next;
 
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,39 +28,39 @@ public class Experiance6 extends AppCompatActivity {
         preferences = getSharedPreferences("Data",0);
         editor = preferences.edit();
 
-        edcompanyName = findViewById(R.id.edcompanyName);
-        edjob = findViewById(R.id.edjob);
-        eddescription = findViewById(R.id.eddescription);
-        edyear = findViewById(R.id.edyear);
-        edcerti = findViewById(R.id.edcerti);
-        txtreset = findViewById(R.id.txtreset);
-        txtnext = findViewById(R.id.txtnext);
+        companyName = findViewById(R.id.companyName);
+        job = findViewById(R.id.job);
+        description = findViewById(R.id.description);
+        year = findViewById(R.id.year);
+        cert = findViewById(R.id.cert);
+        reset = findViewById(R.id.reset);
+        next = findViewById(R.id.next);
 
-        txtreset.setOnClickListener(new View.OnClickListener() {
+        reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edcompanyName.setText("");
-                edjob.setText("");
-                eddescription.setText("");
-                edyear.setText("");
-                edcerti.setText("");
+                companyName.setText("");
+                job.setText("");
+                description.setText("");
+                year.setText("");
+                cert.setText("");
             }
         });
 
-        txtnext.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                company_name = edcompanyName.getText().toString();
-                job = edjob.getText().toString();
-                description = eddescription.getText().toString();
-                year = edyear.getText().toString();
-                certi = edcerti.getText().toString();
+                company_name = companyName.getText().toString();
+                job1 = job.getText().toString();
+                description1 = description.getText().toString();
+                year1 = year.getText().toString();
+                certi1 = cert.getText().toString();
 
                 editor.putString("companyName",company_name);
-                editor.putString("job",job);
-                editor.putString("desc",description);
-                editor.putString("yeare",year);
-                editor.putString("certi",certi);
+                editor.putString("job",job1);
+                editor.putString("desc",description1);
+                editor.putString("year",year1);
+                editor.putString("cert",certi1);
                 editor.commit();
 
                 Intent intent = new Intent(Experiance6.this,Skill7.class);

@@ -33,31 +33,32 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/edcompanyName"
+            android:id="@+id/companyName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_marginTop="10dp"
             android:background="@drawable/shap2"
             android:hint="Company name"
+            android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#99000000" />
 
         <EditText
-            android:id="@+id/edjob"
+            android:id="@+id/job"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_margintop="10dp"
+            
             android:background="@drawable/shap2"
             android:hint="Job Title"
+            android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#99000000" />
 
         <EditText
-            android:id="@+id/eddescription"
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="5dp"
@@ -70,26 +71,28 @@
             android:textColorHint="#99000000" />
 
         <EditText
-            android:id="@+id/edyear"
+            android:id="@+id/year"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/shap2"
             android:hint="Experience Years / Months"
+            android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#99000000" />
 
         <EditText
-            android:id="@+id/edcerti"
+            android:id="@+id/cert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:layout_margin="5dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/shap2"
-            android:padding="10dp"
             android:hint="Awards And Certificats"
-            android:textColorHint="#99000000"/>
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#99000000" />
 
 
     </LinearLayout>
@@ -102,10 +105,10 @@
         android:gravity="center_horizontal|bottom">
 
         <TextView
-            android:id="@+id/txtreset"
+            android:id="@+id/reset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/shap1"
@@ -118,10 +121,10 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/txtnext"
+            android:id="@+id/next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:background="@drawable/shap1"

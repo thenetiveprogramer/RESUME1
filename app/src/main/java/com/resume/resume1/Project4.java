@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 public class Project4 extends AppCompatActivity {
 
-    String git,link,projec;
+    String git,link,projectee;
     EditText github,Linkedin,project;
 
-    TextView txtreset,txtnext;
+    TextView reset,next;
 
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
@@ -30,10 +30,10 @@ public class Project4 extends AppCompatActivity {
         github = findViewById(R.id.github);
         Linkedin = findViewById(R.id.Linkedin);
         project = findViewById(R.id.project);
-        txtreset = findViewById(R.id.txtreset);
-        txtnext = findViewById(R.id.txtnext);
+        reset = findViewById(R.id.txtreset);
+        next = findViewById(R.id.txtnext);
 
-        txtreset.setOnClickListener(new View.OnClickListener() {
+        reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -42,17 +42,17 @@ public class Project4 extends AppCompatActivity {
             }
         });
 
-        txtnext.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 git = github.getText().toString();
                 link = Linkedin.getText().toString();
-                projec = project.getText().toString();
+                projectee = project.getText().toString();
 
                 editor.putString("git",git);
                 editor.putString("link",link);
-                editor.putString("project",projec);
+                editor.putString("project",projectee);
                 editor.commit();
 
                 Intent intent = new Intent(Project4.this,Education5.class);

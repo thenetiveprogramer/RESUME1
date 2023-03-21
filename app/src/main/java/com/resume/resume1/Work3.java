@@ -12,11 +12,11 @@ import android.widget.TextView;
 
 public class Work3 extends AppCompatActivity {
 
-    String yearr,orderr,companyy,titlee,responss;
+    String yea,ord,com,tit,res;
 
-    EditText year,order,company,title,respons;
+    EditText year,order,company,title,response;
 
-    TextView txtreset,txtnext;
+    TextView reset,next;
 
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
@@ -30,15 +30,15 @@ public class Work3 extends AppCompatActivity {
         preferences = getSharedPreferences("Data",0);
         editor = preferences.edit();
 
-        txtnext=findViewById(R.id.txtnext);
-        txtreset=findViewById(R.id.txtreset);
+        next=findViewById(R.id.txtnext);
+        reset=findViewById(R.id.txtreset);
         year=findViewById(R.id.year);
         order=findViewById(R.id.order);
         company=findViewById(R.id.company);
         title=findViewById(R.id.title);
-        respons=findViewById(R.id.respons);
+        response=findViewById(R.id.response);
 
-        txtreset.setOnClickListener(new View.OnClickListener() {
+        reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -46,28 +46,30 @@ public class Work3 extends AppCompatActivity {
                 order.setText("");
                 company.setText("");
                 title.setText("");
-                respons.setText("");
+                response.setText("");
             }
         });
 
-        txtnext.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                yearr = year.getText().toString();
-                orderr = order.getText().toString();
-                companyy = company.getText().toString();
-                titlee = title.getText().toString();
-                responss = respons.getText().toString();
+                yea = year.getText().toString();
+                ord = order.getText().toString();
+                com = company.getText().toString();
+                tit = title.getText().toString();
+                res = response.getText().toString();
 
-                editor.putString("year",yearr);
-                editor.putString("order",orderr);
-                editor.putString("company",companyy);
-                editor.putString("title",titlee);
-                editor.putString("responss",responss);
+                editor.putString("year",yea);
+                editor.putString("order",ord);
+                editor.putString("company",com);
+                editor.putString("title",tit);
+                editor.putString("responss",res);
                 editor.commit();
 
                 Intent intent = new Intent(Work3.this,Project4.class);
+                finish();
+                startActivity(intent);
             }
         });
 

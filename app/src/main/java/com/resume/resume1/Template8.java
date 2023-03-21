@@ -2,6 +2,7 @@ package com.resume.resume1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -9,8 +10,9 @@ import android.widget.TextView;
 public class Template8 extends AppCompatActivity {
 
     SharedPreferences preferences;
-    TextView txtName,tvaddress,educat,tvemail,tvphone,tvhobby,tvschool,tvcourse,tvgrade,tvyear,tvCompany,tvjob,tvDesciription,tvJobyear,tvskill1,tvskill2,tvskill3,tvskill4,tvgithub,tvlinkedin,tvobjective,tvcompanyname,tvcompanylink;
+    TextView Name,address,educat,email,phone,hobby,school,course,grade,year,Company,job,Desciription,Jobyear,skill1,skill2,skill3,skill4,github,linkedin,objective,companyname,companylink;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,28 +20,30 @@ public class Template8 extends AppCompatActivity {
 
         preferences = getSharedPreferences("Data",0);
 
-        txtName = findViewById(R.id.name);
-        tvaddress = findViewById(R.id.tvaddress);
-        tvemail = findViewById(R.id.tvemail);
-        tvphone = findViewById(R.id.tvphone);
-        tvhobby = findViewById(R.id.tvhobby);
-        tvschool = findViewById(R.id.tvschool);
-        tvcourse = findViewById(R.id.tvcourse);
-        tvgrade = findViewById(R.id.tvgrade);
-        tvyear = findViewById(R.id.tvyear);
-        tvCompany = findViewById(R.id.tvCompany);
-        tvjob = findViewById(R.id.tvjob);
-        tvDesciription = findViewById(R.id.tvDesciription);
-        tvJobyear = findViewById(R.id.tvJobyear);
-        tvskill1 = findViewById(R.id.tvskill1);
-        tvskill2 = findViewById(R.id.tvskill2);
-        tvskill3 = findViewById(R.id.tvskill3);
-        tvskill4 = findViewById(R.id.tvskill4);
-        tvlinkedin = findViewById(R.id.tvlinkedin);
-        tvgithub = findViewById(R.id.tvgithub);
-        tvobjective = findViewById(R.id.tvobjective);
-        tvcompanyname = findViewById(R.id.tvcompanyname);
-        tvcompanylink = findViewById(R.id.tvcompanylink);
+        Name = findViewById(R.id.name);
+        address = findViewById(R.id.address);
+        email = findViewById(R.id.email);
+        phone = findViewById(R.id.phone);
+        hobby = findViewById(R.id.hobby);
+        school = findViewById(R.id.school);
+        course = findViewById(R.id.course);
+        grade = findViewById(R.id.grade);
+        year = findViewById(R.id.year);
+
+        Company = findViewById(R.id.Company);
+        job = findViewById(R.id.job);
+        Desciription = findViewById(R.id.Desciription);
+        Jobyear = findViewById(R.id.Jobyear);
+        skill1 = findViewById(R.id.skill1);
+        skill2 = findViewById(R.id.skill2);
+        skill3 = findViewById(R.id.skill3);
+        skill4 = findViewById(R.id.skill4);
+        linkedin = findViewById(R.id.linkedin);
+        github = findViewById(R.id.github);
+        objective = findViewById(R.id.objective);
+        companyname = findViewById(R.id.companyname);
+        companylink = findViewById(R.id.companylink);
+        educat = findViewById(R.id.educat);
 
         String n1 = preferences.getString("name","");
         String n2 = preferences.getString("address","");
@@ -64,28 +68,28 @@ public class Template8 extends AppCompatActivity {
         String n21 = preferences.getString("coname","");
         String n22 = preferences.getString("colink","");
 
-        txtName.setText(n1);
-        tvaddress.setText(n2);
-        tvemail.setText(n3);
-        tvphone.setText(n4);
-        tvhobby.setText(n5);
-        tvschool.setText(n6);
-        tvcourse.setText(n7);
-        tvgrade.setText(n8);
-        tvyear.setText(n9);
-        tvCompany.setText(n10);
-        tvjob.setText(n11);
-        tvDesciription.setText(n12);
-        tvJobyear.setText(n13);
-        tvskill1.setText(n14);
-        tvskill2.setText(n15);
-        tvskill3.setText(n16);
-        tvskill4.setText(n17);
-        tvgithub.setText(n18);
-        tvlinkedin.setText(n19);
-        tvobjective.setText(n20);
-        tvcompanyname.setText(n21);
-        tvcompanylink.setText(n22);
+        Name.setText(n1);
+        address.setText(n2);
+        email.setText(n3);
+        phone.setText(n4);
+        hobby.setText(n5);
+        school.setText(n6);
+        course.setText(n7);
+        grade.setText(n8);
+        year.setText(n9);
+        Company.setText(n10);
+        job.setText(n11);
+        Desciription.setText(n12);
+        Jobyear.setText(n13);
+        skill1.setText(n14);
+        skill2.setText(n15);
+        skill3.setText(n16);
+        skill4.setText(n17);
+        github.setText(n18);
+        linkedin.setText(n19);
+        objective.setText(n20);
+        companyname.setText(n21);
+        companylink.setText(n22);
 
     }
 }

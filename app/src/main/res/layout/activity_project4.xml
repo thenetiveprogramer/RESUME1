@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your Work Profile"
+        android:text="Project"
         android:layout_margin="50dp"
         android:letterSpacing="0.2"
         android:textStyle="bold"
@@ -70,7 +70,7 @@
         android:gravity="center_horizontal|bottom">
 
         <TextView
-            android:id="@+id/txtreset"
+            android:id="@+id/reset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -86,7 +86,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/txtnext"
+            android:id="@+id/next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

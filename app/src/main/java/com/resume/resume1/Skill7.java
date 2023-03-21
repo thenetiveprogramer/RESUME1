@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class Skill7 extends AppCompatActivity {
 
-    TextView txtreset,txtnext;
+    TextView reset,next;
 
     EditText Skill1,Skill2,Skill3,Skill4,Skill5;
 
@@ -29,15 +29,15 @@ public class Skill7 extends AppCompatActivity {
         preferences = getSharedPreferences("Date",0);
         editor = preferences.edit();
 
-        txtreset=findViewById(R.id.txtreset);
-        txtnext=findViewById(R.id.txtnext);
+        reset=findViewById(R.id.txtreset);
+        next=findViewById(R.id.txtnext);
         Skill1=findViewById(R.id.skill1);
         Skill2=findViewById(R.id.skill2);
         Skill3=findViewById(R.id.skill3);
         Skill4=findViewById(R.id.skill4);
         Skill5=findViewById(R.id.skill5);
 
-        txtreset.setOnClickListener(new View.OnClickListener() {
+        reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -48,7 +48,7 @@ public class Skill7 extends AppCompatActivity {
                 Skill5.setText("");
             }
         });
-        txtnext.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

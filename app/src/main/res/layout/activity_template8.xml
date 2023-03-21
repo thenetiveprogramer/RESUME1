@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Template8">
 
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -19,9 +20,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:textColor="#AF4929"
-            android:hint=""
-            android:inputType="textPersonName"
+            android:padding="2dp"
+            android:text=""
+            android:textColor="@color/black"
             android:textSize="14dp"
             android:textStyle="bold" />
 
@@ -43,7 +44,7 @@
             android:background="@color/black" />
 
         <TextView
-            android:id="@+id/tvschool"
+            android:id="@+id/school"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -55,7 +56,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvcourse"
+            android:id="@+id/course"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -67,7 +68,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvgrade"
+            android:id="@+id/grade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -79,7 +80,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvyear"
+            android:id="@+id/year"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -108,7 +109,7 @@
             android:background="@color/black" />
 
         <TextView
-            android:id="@+id/tvskill1"
+            android:id="@+id/skill1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -120,7 +121,7 @@
             android:textSize="12dp" />
 
         <TextView
-            android:id="@+id/tvskill2"
+            android:id="@+id/skill2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -132,7 +133,7 @@
             android:textSize="12dp" />
 
         <TextView
-            android:id="@+id/tvskill3"
+            android:id="@+id/skill3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -144,7 +145,7 @@
             android:textSize="12dp" />
 
         <TextView
-            android:id="@+id/tvskill4"
+            android:id="@+id/skill4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -172,9 +173,8 @@
             android:background="@color/black" />
 
 
-
         <TextView
-            android:id="@+id/tvCompany"
+            android:id="@+id/Company"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -186,7 +186,7 @@
             android:textSize="12dp" />
 
         <TextView
-            android:id="@+id/tvjob"
+            android:id="@+id/job"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -198,7 +198,7 @@
             android:textSize="12dp" />
 
         <TextView
-            android:id="@+id/tvDesciription"
+            android:id="@+id/Desciription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -210,7 +210,7 @@
             android:textSize="12dp" />
 
         <TextView
-            android:id="@+id/tvJobyear"
+            android:id="@+id/Jobyear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -264,15 +264,15 @@
 
     </LinearLayout>
 
-
     <LinearLayout
+
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/shap1"
+        android:background="#3B837C"
         android:orientation="vertical">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="69dp"
             android:layout_height="100dp"
@@ -282,7 +282,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="25dp"/>
+            android:layout_height="25dp" />
 
         <View
             android:layout_width="match_parent"
@@ -296,7 +296,8 @@
             android:text="PROFILE"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
 
         <View
             android:layout_width="match_parent"
@@ -304,7 +305,7 @@
             android:background="@color/white" />
 
         <TextView
-            android:id="@+id/tvobjective"
+            android:id="@+id/objective"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="2dp"
@@ -313,7 +314,7 @@
             android:textSize="10dp" />
 
         <TextView
-            android:id="@+id/tvgithub"
+            android:id="@+id/github"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="2dp"
@@ -322,7 +323,16 @@
             android:textSize="10dp" />
 
         <TextView
-            android:id="@+id/tvlinkedin"
+            android:id="@+id/linkedin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="2dp"
@@ -347,7 +357,8 @@
             android:text="CONTACTS"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
 
         <View
             android:layout_width="match_parent"
@@ -355,7 +366,7 @@
             android:background="@color/white" />
 
         <TextView
-            android:id="@+id/tvphone"
+            android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="2dp"
@@ -364,7 +375,7 @@
             android:textSize="10dp" />
 
         <TextView
-            android:id="@+id/tvaddress"
+            android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="2dp"
@@ -389,7 +400,8 @@
             android:text="WORK"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
 
         <View
             android:layout_width="match_parent"
@@ -397,7 +409,7 @@
             android:background="@color/white" />
 
         <TextView
-            android:id="@+id/tvcompanyname"
+            android:id="@+id/companyname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="2dp"
@@ -406,7 +418,7 @@
             android:textSize="10dp" />
 
         <TextView
-            android:id="@+id/tvcompanylink"
+            android:id="@+id/companylink"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="2dp"
@@ -426,7 +438,8 @@
             android:text="HOBBY"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
 
         <View
             android:layout_width="match_parent"
